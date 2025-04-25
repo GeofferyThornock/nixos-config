@@ -28,6 +28,7 @@
     cmatrix
     eza
     tofi
+    foot
 
     obsidian
 

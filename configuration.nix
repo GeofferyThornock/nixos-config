@@ -137,7 +137,8 @@
 	xorg.xinit
 	xorg.xkbcomp
 	inputs.nixCats.packages.${system}.nvim
-    vivaldi
+ 	vivaldi
+	alacritty
   ];
   
 

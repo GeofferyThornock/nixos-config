@@ -29,8 +29,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1745436704,
-        "narHash": "sha256-L1Km4bI11lW3Uff0+qm3dzKQlf9xoa1njHue+om8prA=",
+        "lastModified": 1745594821,
+        "narHash": "sha256-/O6JBh/FR8RP37dlM3dYBlRYlx7TZ/YgZfZ1x65QkHo=",
         "path": "/home/geoff/.config/nvim",
         "type": "path"
       },
@@ -41,11 +41,11 @@
     },
     "nixCats_2": {
       "locked": {
-        "lastModified": 1745277833,
-        "narHash": "sha256-Br91+NLL/Wc+B9p19Yr6WXrz0uRQ/Or/X4XQxlzFf4E=",
+        "lastModified": 1745567008,
+        "narHash": "sha256-XOUjevS/1MCZxp+iNCsE7KXoTuiepeYDw0xYubUfB+A=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "e94f31ad8a49fb6f7c9b87cbaf83f478d929cf28",
+        "rev": "4ce63f2108b7dda9566130fe8425173383d64f87",
         "type": "github"
       },
       "original": {
@@ -56,11 +56,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1745433070,
-        "narHash": "sha256-UHA4bi1LMjNK9uYEsixSLO/jP6KyM0rM1M8r6WZ5yTs=",
+        "lastModified": 1745526780,
+        "narHash": "sha256-LXXYBmFPMQU2lTb6alKWfjgQs08BKn+txMNcgbu00hI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9b98f6644cde291b64c423eac29bc28649481d78",
+        "rev": "9204750b34cae1a8347ab4b5588115edfeebc6d7",
         "type": "github"
       },
       "original": {
