@@ -139,6 +139,7 @@
 	inputs.nixCats.packages.${system}.nvim
  	vivaldi
 	alacritty
+	tofi
   ];
   
 

@@ -27,7 +27,6 @@
     neofetch
     cmatrix
     eza
-    tofi
     foot
 
     obsidian
