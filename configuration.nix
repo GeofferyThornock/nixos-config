@@ -41,6 +41,8 @@
 
 # Enable networking
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 # Set your time zone.
   time.timeZone = "America/Boise";
@@ -88,7 +90,6 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "dvorak";
-    options = "ctrl:swapcaps";
   };
   # Configure console keymap
   console.useXkbConfig = true;
@@ -133,6 +134,7 @@
 	hyprpaper
 	kitty
 	waybar
+	blueman
 	rose-pine-hyprcursor
 	xorg.xinit
 	xorg.xkbcomp
