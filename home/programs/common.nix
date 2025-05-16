@@ -27,12 +27,8 @@
     neofetch
     cmatrix
     eza
-    foot
-
-    obsidian
 
     # package managers
-    nodejs
     yarn
   ];
 

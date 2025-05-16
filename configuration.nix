@@ -140,9 +140,11 @@
 	xorg.xkbcomp
 	inputs.nixCats.packages.${system}.nvim
  	vivaldi
-	alacritty
 	tofi
+	gparted
+	nasm
     fuzzel
+    polkit
   ];
   
 
