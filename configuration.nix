@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   users.defaultUserShell = pkgs.zsh;
 
-  boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.systemd-boot.configurationLimit = 5;
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -68,8 +68,20 @@
 
 # Enable the Cinnamon Desktop Environment.
   programs.hyprland.enable = true;
+  programs.uwsm.enable = true;
   programs.hyprland.withUWSM  = true;
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "${pkgs.hyprland}/bin/Hyprland";
+        user = "geoff";
+      };
+      default_session = initial_session;
+    };
+  };
 
+    
   services.xserver = {
 	  enable = true;
 	  videoDrivers = [ "nvidia" ];
@@ -138,6 +150,7 @@
 	rose-pine-hyprcursor
 	xorg.xinit
 	xorg.xkbcomp
+	xorg.xmodmap
 	inputs.nixCats.packages.${system}.nvim
  	vivaldi
 	tofi

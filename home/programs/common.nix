@@ -27,6 +27,7 @@
     neofetch
     cmatrix
     eza
+    spotify
 
     # package managers
     yarn

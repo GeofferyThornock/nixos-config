@@ -29,8 +29,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1747354103,
-        "narHash": "sha256-er9ysnijn7h9Wyn4eEiDcOn5UzrSfqTozyiXL9CLDYo=",
+        "lastModified": 1747355446,
+        "narHash": "sha256-MlIWbSpfANLOaeuwf4v3RHqFwUMkEEOGMKLAEJamn+w=",
         "path": "/home/geoff/.config/nvim",
         "type": "path"
       },
