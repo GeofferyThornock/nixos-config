@@ -53,7 +53,7 @@ in
     ];
     home.file = {
       ".config/nvim" = {
-        source = /home/geoff/.config/nvim;
+        source = ../../../.config/nvim;
         recursive = true;
       };
     };
