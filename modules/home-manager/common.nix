@@ -21,7 +21,6 @@
     ripgrep
 
     # terminal
-    neovim
     tmux
     nnn
     neofetch

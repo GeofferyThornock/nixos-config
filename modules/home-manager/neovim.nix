@@ -41,12 +41,13 @@ in
       pkgs.tree-sitter-grammars.tree-sitter-bash
       pkgs.tree-sitter-grammars.tree-sitter-regex
       pkgs.tree-sitter-grammars.tree-sitter-markdown
+      pkgs.ripgrep
 
       pkgs.fzf
       # pkgs.magick
       pkgs.lua-language-server
-      # pkgs.nil
-      pkgs.nixd
+      pkgs.nil
+      pkgs.asm-lsp
       pkgs.go
       pkgs.stylua
       pkgs.cargo

@@ -1,56 +1,55 @@
 return {
     {
-        "williamboman/mason.nvim",
-        enabled = require('nixCatsUtils').lazyAdd(true, false),
-        config = function()
-            require("mason").setup()
-        end,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        enabled = require('nixCatsUtils').lazyAdd(true, false),
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "nil","asm_lsp", "clangd", "zls", "rust_analyzer", "csharp_ls" },
-                automatic_installation = true,
-            })
-        end,
-    },
-    {
         "neovim/nvim-lspconfig",
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
-            vim.lsp.config('nil', {
-                capabilities = capabilities
+
+            -- Reserve a space in the gutter
+                -- This will avoid an annoying layout shift in the screen
+            vim.opt.signcolumn = 'yes'
+
+            -- Add cmp_nvim_lsp capabilities settings to lspconfig
+            -- This should be executed before you configure any language server
+            -- local lspconfig_defaults = require('lspconfig').util.default_config
+            -- lspconfig_defaults.capabilities = vim.tbl_deep_extend('force', lspconfig_defaults.capabilities, require('blink.cmp').get_lsp_capabilities())
+
+            -- This is where you enable features that only work
+            -- if there is a language server active in the file
+            vim.api.nvim_create_autocmd('LspAttach', {
+              desc = 'LSP actions',
+              callback = function(event)
+                local opts = { buffer = event.buf }
+
+                vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+                vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+                vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+                vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+                vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+              end,
             })
-            vim.lsp.config('asm_lsp', {
-                capabilities = capabilities
-            })
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.ts_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.zls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.rust_analyzer.setup({
-                settings = {
-                    ['rust_analyzer'] = {},
+
+            local capabilities = {
+              textDocument = {
+                foldingRange = {
+                  dynamicRegistration = false,
+                  lineFoldingOnly = true,
                 },
-                capabilities = capabilities,
+              },
+            }
+
+
+            -- Setup language servers.
+
+            vim.lsp.config('*', {
+              capabilities = capabilities,
+              root_markers = { '.git' },
             })
-            lspconfig.csharp_ls.setup({
-                capabilities = capabilities,
-            })
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-            vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
+            vim.lsp.enable {
+              'lua_ls',
+              'asm_lsp',
+              'nil_ls',
+            }
+
         end,
     },
 }

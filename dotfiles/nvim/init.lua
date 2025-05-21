@@ -21,7 +21,6 @@ require('lazy').setup {
     -- import your plugins
     { import = 'plugins' },
   },
-  vim.cmd.colorscheme("darkearth")
 }
 
 require('lazy').setup { { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' } }

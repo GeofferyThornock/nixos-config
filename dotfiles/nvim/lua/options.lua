@@ -66,7 +66,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
 vim.cmd("set termguicolors")
 vim.cmd("set expandtab")
 vim.cmd("set number")
