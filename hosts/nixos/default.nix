@@ -113,7 +113,6 @@
       xorg.xinit
       xorg.xkbcomp
       xorg.xmodmap
-      inputs.nixCats.packages.${system}.nvim
       vivaldi
       tofi
       gparted

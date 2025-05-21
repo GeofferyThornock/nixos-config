@@ -4,12 +4,16 @@
   home.username = "geoff";
   home.homeDirectory = "/home/geoff";
 
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   imports = with pkgs; [
         ../../modules/home-manager
   ];
   # This value determines the Home Manager release that your
+
+
+  within.neovim.enable = true;
 
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards

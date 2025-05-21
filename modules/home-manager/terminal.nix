@@ -23,6 +23,7 @@
           '';
           shellAliases = {
               tms = "tmux-sessionizer";
+              vim = "nvim";
               ls = "eza -a";
               ll = "ls -l";
               update = "sudo nixos-rebuild switch --flake /home/geoff/nixos";
