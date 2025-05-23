@@ -4,6 +4,7 @@
         zsh
         oh-my-zsh
         ghostty
+        qemu
         wl-clipboard
     ];
 
