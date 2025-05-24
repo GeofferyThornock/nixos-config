@@ -10,5 +10,7 @@
       python314
       dotnet-runtime
       gcc
+      binutils
+      libgcc
     ];
 }
