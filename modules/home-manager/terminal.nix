@@ -2,6 +2,7 @@
 {
     home.packages = with pkgs; [
         zsh
+        gzip
         oh-my-zsh
         ghostty
         qemu
