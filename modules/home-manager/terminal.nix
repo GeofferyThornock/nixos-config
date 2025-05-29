@@ -7,6 +7,7 @@
         ghostty
         qemu
         wl-clipboard
+        gnumake
     ];
 
     programs = {
