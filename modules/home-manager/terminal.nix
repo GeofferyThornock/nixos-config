@@ -8,6 +8,7 @@
         qemu
         wl-clipboard
         gnumake
+        grub2
     ];
 
     programs = {
@@ -23,6 +24,10 @@
                 if [ -d "$HOME/.local/bin/scripts" ] ; then
                     PATH="$PATH:$HOME/.local/bin/scripts"
                 fi
+                if [ -d "$HOME/opt/cross/bin" ] ; then
+                    PATH="$PATH:$HOME/opt/cross/bin"
+                fi
+
           '';
           shellAliases = {
               tms = "tmux-sessionizer";

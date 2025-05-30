@@ -119,6 +119,9 @@
       nasm
       fuzzel
       polkit
+      gmpxx
+      mpc
+      mpfr
   ];
 
 
